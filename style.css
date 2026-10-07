@@ -1,0 +1,165 @@
+/* ================= 1. REGRAS GERAIS E RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #727c56; /* Verde das abas laterais externas */
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ================= 2. CONTROLE DE ALTERNÂNCIA DE TELAS ================= */
+/* Por padrão, a loja aparece e o login fica oculto */
+#loja { display: block; background-color: #fffdec; }
+#login { display: none; }
+
+/* Quando a URL mudar para '#login', exibe o login e esconde a loja */
+#login:target {
+  display: flex;
+  flex-direction: column;
+}
+#login:target ~ #loja {
+  display: none;
+}
+
+
+/* ================= 3. COMPONENTES DA LOJA ================= */
+/* Header da Loja */
+.top-header { background-color: #d49527; color: white; padding: 12px 0; }
+.top-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo-area { font-weight: bold; font-size: 1.3rem; }
+.search-bar { flex-grow: 0.4; }
+.search-bar input { width: 100%; padding: 8px 15px; border-radius: 20px; border: 1px solid #b37a1a; outline: none; }
+.header-icons { display: flex; gap: 20px; }
+.profile-link { color: white; text-decoration: none; font-weight: bold; }
+
+/* Menu de Navegação */
+.nav-bar { background-color: #e69e2c; padding: 10px 0; }
+.nav-bar ul { display: flex; justify-content: space-around; list-style: none; }
+.nav-bar a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+/* Carrossel da Loja */
+.banner-container { margin: 25px 0; }
+.carousel {
+  position: relative;
+  background-color: #f7dca3;
+  background-image: 
+    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.22) 45px, transparent 45px),
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,0.22) 35px, transparent 35px),
+    radial-gradient(circle at 88% 75%, rgba(255,255,255,0.22) 55px, transparent 55px);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.carousel-slides { width: 100%; position: relative; min-height: 200px; }
+.slide {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden;
+  display: flex; align-items: center; justify-content: center; gap: 40px; padding: 25px 90px;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s;
+}
+#slide-1:checked ~ .carousel-slides .item-1,
+#slide-2:checked ~ .carousel-slides .item-2,
+#slide-3:checked ~ .carousel-slides .item-3,
+#slide-4:checked ~ .carousel-slides .item-4,
+#slide-5:checked ~ .carousel-slides .item-5 { position: relative; opacity: 1; visibility: visible; }
+
+.banner-img-container { width: 110px; height: 155px; display: flex; align-items: center; justify-content: center; }
+.banner-img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25); border-radius: 4px; }
+.banner-text h3 { font-size: 1.1rem; margin-bottom: 8px; color: #fffdec; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+.price-de { color: #b02626; font-weight: bold; margin-bottom: 4px; }
+.price-por { color: #24a148; font-weight: bold; }
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 50%; width: 38px; height: 38px; font-size: 1.1rem; cursor: pointer; z-index: 10;
+  display: flex; align-items: center; justify-content: center; user-select: none;
+}
+.prev-btn { left: 25px; }
+.next-btn { right: 25px; }
+
+/* Vitrine de Produtos */
+.section-title { font-size: 1.1rem; font-weight: bold; margin: 35px 0 15px 0; color: #444; }
+.grid-produtos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.card-produto { display: flex; flex-direction: column; }
+.capa-container { background-color: #ecdcb9; height: 190px; border-radius: 20px 20px 0 0; display: flex; align-items: flex-end; justify-content: center; position: relative; }
+.livro-real { width: 105px; height: 145px; background-color: #16375c; color: white; padding: 12px; font-size: 0.85rem; font-weight: bold; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.15); position: absolute; bottom: 20px; }
+.action-bar { background-color: #7bf069; display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; border-radius: 0 0 12px 12px; }
+.btn-comprar { background: none; border: none; color: white; font-weight: bold; font-size: 0.85rem; cursor: pointer; }
+.contador { display: flex; align-items: center; background: white; border-radius: 4px; padding: 2px 6px; gap: 8px; font-size: 0.85rem; }
+.contador button { background: none; border: none; font-weight: bold; padding: 0 4px; }
+.produto-info { padding: 10px 5px; font-size: 0.85rem; }
+.nome-livro { font-weight: bold; margin-bottom: 6px; }
+.preco-de { color: #888; }
+.preco-por { color: #c92222; font-weight: bold; }
+
+/* Rodapé */
+.main-footer { background-color: #e69e2c; margin-top: 60px; padding: 30px 0 20px 0; font-size: 0.85rem; }
+.footer-links { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 20px; margin-bottom: 20px; }
+.footer-col h4 { margin-bottom: 10px; color: #2c1e0a; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 6px; color: #444; }
+.footer-bottom { text-align: center; color: #555; font-size: 0.8rem; }
+
+
+/* ================= 4. COMPONENTES DA TELA DE LOGIN ================= */
+.login-screen {
+  width: 100vw; height: 100vh; background-color: #fffdec;
+  position: fixed; top: 0; left: 0; z-index: 100; align-items: center;
+}
+.login-header {
+  background-color: #b77b1e; width: 100%; padding: 15px 40px;
+  display: flex; align-items: center; border-bottom: 4px solid #575e42;
+}
+.login-logo-area { color: white; font-weight: bold; font-size: 1.4rem; }
+
+/* Card de Login Central */
+.login-card {
+  background-color: #f7ca88; padding: 30px 40px; border-radius: 25px;
+  width: 100%; max-width: 440px; margin-top: auto; margin-bottom: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;
+}
+.card-title { font-family: 'Georgia', serif; font-size: 1.7rem; font-weight: bold; color: #000; margin-bottom: 12px; }
+
+/* Avatar Redondo Tracejado */
+.avatar-container { display: flex; justify-content: center; margin-bottom: 25px; }
+.avatar-circle {
+  width: 76px; height: 76px; border: 2px dashed #000; border-radius: 50%;
+  background-color: #c7e0f4; overflow: hidden; display: flex; flex-direction: column; align-items: center;
+}
+.avatar-head { width: 24px; height: 24px; background-color: #4a6b82; border-radius: 50%; margin-top: 12px; border: 1px solid #000; }
+.avatar-body { width: 46px; height: 32px; background-color: #4a6b82; border-radius: 20px 20px 0 0; border: 1px solid #000; margin-top: 4px; }
+
+/* Inputs e Envoltórios */
+.login-input-group { text-align: left; margin-bottom: 16px; }
+.input-label { display: block; font-size: 0.95rem; color: #000; margin-bottom: 6px; }
+.field-wrapper { position: relative; display: flex; align-items: center; }
+.field-icon { position: absolute; left: 12px; font-size: 0.9rem; color: #444; pointer-events: none; }
+.toggle-visibility { position: absolute; right: 15px; font-size: 0.9rem; color: #e3d2be; cursor: pointer; }
+
+.form-input {
+  width: 100%; padding: 10px 15px 10px 35px; border-radius: 25px; border: none;
+  background-color: #bda27e; color: #2b2013; font-size: 0.95rem; outline: none;
+}
+.form-input::placeholder { color: #52473b; }
+.helper-link { display: inline-block; font-size: 0.75rem; color: #475eb3; text-decoration: underline; margin-top: 6px; }
+
+/* Botão Verde Oval */
+.btn-submit {
+  width: 75%; padding: 10px; background-color: #45a049; color: white;
+  border: none; border-radius: 25px; font-size: 1rem; cursor: pointer;
+  margin: 25px auto 5px auto; display: block; transition: background-color 0.2s;
+}
+.btn-submit:hover { background-color: #388e3c; }
+
+/* Rodapé do Form de Login */
+.form-footer { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 8px; }
+.btn-voltar-loja { font-size: 0.8rem; color: #333; text-decoration: none; }
+.btn-voltar-loja:hover { text-decoration: underline; }
