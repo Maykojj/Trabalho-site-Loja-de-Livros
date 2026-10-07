@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Topo da Página -->
+  <header class="top-header">
+    <div class="container">
+      <div class="logo-area">
+        <span class="icon">📖</span> Mundo Livros
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar...">
+      </div>
+      <div class="header-icons">
+        <span>👤 Perfil</span>
+        <span>🛒 Carrinho</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Laranja -->
+  <nav class="nav-bar">
+    <div class="container">
+      <ul>
+        <li><a href="#">Mais gêneros</a></li>
+        <li><a href="#">Mais desejados</a></li>
+        <li><a href="#">Melhores promoções</a></li>
+        <li><a href="#">Novos Livros</a></li>
+        <li><a href="#">Fale conosco</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Corpo do Site -->
+  <main class="container">
+    
+    <!-- Banner de Destaque -->
+    <div class="banner-container">
+      <div class="banner">
+        <div class="banner-img">
+          O GRANDE LIVRO DE MATEMÁTICA
+        </div>
+        <div class="banner-text">
+          <h3>O grande livro de matemática do Manual do Mundo</h3>
+          <p class="price-de">De: R$ 100,00</p>
+          <p class="price-por">Por: R$ 85,00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção 1 -->
+    <section>
+      <h2 class="section-title">MAIS VENDIDOS</h2>
+      <div class="grid-produtos">
+        
+        <!-- Produto 1 (Com Livro) -->
+        <div class="card-produto">
+          <div class="capa-container">
+            <div class="livro-real">Rei Arthur</div>
+          </div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Rei Arthur e os Cavaleiros da Távola Redonda</div>
+            <div class="preco-de">De: R$ 50,00</div>
+            <div class="preco-por">Por: R$ 45,00</div>
+          </div>
+        </div>
+
+        <!-- Produto 2 (Vazio) -->
+        <div class="card-produto">
+          <div class="capa-container"></div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Nome do livro</div>
+            <div class="preco-de">Preço: De:</div>
+            <div class="preco-por">Por:</div>
+          </div>
+        </div>
+
+        <!-- Produto 3 (Vazio) -->
+        <div class="card-produto">
+          <div class="capa-container"></div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Nome do livro</div>
+            <div class="preco-de">Preço: De:</div>
+            <div class="preco-por">Por:</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção 2 -->
+    <section>
+      <h2 class="section-title">OUTRAS VARIEDADES</h2>
+      <div class="grid-produtos">
+        
+        <div class="card-produto">
+          <div class="capa-container"></div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Nome do livro</div>
+            <div class="preco-de">Preço: De:</div>
+            <div class="preco-por">Por:</div>
+          </div>
+        </div>
+
+        <div class="card-produto">
+          <div class="capa-container"></div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Nome do livro</div>
+            <div class="preco-de">Preço: De:</div>
+            <div class="preco-por">Por:</div>
+          </div>
+        </div>
+
+        <div class="card-produto">
+          <div class="capa-container"></div>
+          <div class="action-bar">
+            <button class="btn-comprar">Comprar agora</button>
+            <div class="contador">
+              <button>-</button><span>01</span><button>+</button>
+            </div>
+          </div>
+          <div class="produto-info">
+            <div class="nome-livro">🛒 Nome do livro</div>
+            <div class="preco-de">Preço: De:</div>
+            <div class="preco-por">Por:</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Conheça-nos</h4>
+          <ul>
+            <li>Sobre a Mundo Livros</li>
+            <li>Meios de Comunicação</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Meios de Pagamentos</h4>
+          <ul>
+            <li>Crédito</li>
+            <li>Débito</li>
+            <li>Pix</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tire suas dúvidas</h4>
+          <ul>
+            <li>Ajuda</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Formas de pagamento aceitas: Pix e cartões de crédito ou débito (Visa, Mastercard e Elo).</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
