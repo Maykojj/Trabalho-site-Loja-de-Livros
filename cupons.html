@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Cupons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros, autores e temas" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categories-navbar">
+    <ul class="categories-menu">
+      <li>
+        <details class="genres-dropdown">
+          <summary>Mais gêneros</summary>
+          <ul class="genres-menu" aria-label="Gêneros literários">
+            <li><a href="genero-classicos.html">Livros Clássicos</a></li>
+            <li><a href="genero-comedia.html">Livros de Comédia</a></li>
+            <li><a href="genero-sociologia.html">Livros de Sociologia</a></li>
+            <li><a href="genero-aventuras.html">Livros de Aventuras</a></li>
+            <li><a href="genero-quadrinhos.html">Gibis/Quadrinhos</a></li>
+            <li><a href="genero-filosofia.html">Livros de Filosofia</a></li>
+            <li><a href="genero-contos.html">Livros de Contos</a></li>
+            <li><a href="genero-poesias.html">Poemas/Poesias</a></li>
+            <li><a href="genero-suspense.html">Livros de Suspense</a></li>
+            <li><a href="genero-culinaria.html">Livros de Culinária</a></li>
+            <li><a href="genero-fabulas.html">Livros de Fábulas</a></li>
+            <li><a href="genero-biografia.html">Livros de Biografia</a></li>
+            <li><a href="genero-ficcao.html">Livros de Ficção</a></li>
+            <li><a href="genero-historia.html">Livros de História</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="mais-desejados.html">Mais desejados</a></li>
+      <li><a href="melhores-promocoes.html">Melhores promoções</a></li>
+      <li><a href="novos-livros.html">Novos livros</a></li>
+      <li><a href="contato.html">Fale conosco</a></li>
+    </ul>
+  </nav>
+
+  <main class="coupons-shell">
+    <h1>Cupons disponíveis:</h1>
+    <section class="coupons-panel" aria-label="Cupons disponíveis">
+      <div class="coupons-grid">
+        <article class="coupon-card coupon-green">
+          <p>Cupom de desconto:<br>30% OFF, válido apenas para uma compra</p>
+          <div class="coupon-code-row">
+            <span class="coupon-code" data-code="DESCONTO30" role="button" tabindex="0" aria-label="Copiar código DESCONTO30">DESCONTO30</span>
+          </div>
+        </article>
+        <article class="coupon-card coupon-blue">
+          <p>Cupom de frete grátis:<br>válido para 3 compras</p>
+          <div class="coupon-code-row">
+            <span class="coupon-code" data-code="FRETEGRATIS3" role="button" tabindex="0" aria-label="Copiar código FRETEGRATIS3">FRETEGRATIS3</span>
+          </div>
+        </article>
+        <article class="coupon-card coupon-yellow">
+          <p>Cupom de desconto:<br>50% OFF, válido apenas para compras acima de R$ 100,00</p>
+          <div class="coupon-code-row">
+            <span class="coupon-code" data-code="DESCONTA50" role="button" tabindex="0" aria-label="Copiar código DESCONTA50">DESCONTA50</span>
+          </div>
+        </article>
+        <article class="coupon-card coupon-lime">
+          <p>Cupom de desconto 20% OFF, válido apenas para uma compra</p>
+          <div class="coupon-code-row">
+            <span class="coupon-code" data-code="DESCONTO20OFF" role="button" tabindex="0" aria-label="Copiar código DESCONTO20OFF">DESCONTO20OFF</span>
+          </div>
+        </article>
+      </div>
+      <p class="coupon-instructions">Para usar os Cupons, apenas copie o código do Cupom e digite no local de Código de Cupom!</p>
+    </section>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="copiar-cupom.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

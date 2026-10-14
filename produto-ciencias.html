@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Ciências</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-book-id="ciencias">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros e autores" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="product-detail-shell">
+      <div class="product-detail-card science-product-card">
+        <div class="coluna-capa">
+          <img id="product-cover" class="capa-livro-detalhe" src="img/OGrandeLivrodeCiênciasdoManualdoMundo.png" alt="Capa de O Grande Livro de Ciências">
+        </div>
+        <div class="divisor-vertical"></div>
+        <div class="coluna-info">
+          <h1 id="product-title" class="titulo-produto">O Grande Livro de Ciências do Manual do Mundo</h1>
+          <div class="bloco-precos-detalhe">
+            <div id="product-old-price" class="preco-de-detalhe">De: <span class="old-price-amount">R$ 110,00</span></div>
+            <div id="product-price" class="preco-por-detalhe">Por: R$ 55,00</div>
+          </div>
+          <p id="product-description" class="product-detail-description">Descubra temas e fenômenos científicos em uma leitura curiosa e envolvente.</p>
+          <div class="tag-frete-gratis">Escolha a modalidade de entrega na próxima etapa.</div>
+          <a id="product-buy-link" href="compra.html?livro=ciencias" class="btn-compre-agora">Comprar agora</a>
+          <button id="add-to-cart" class="btn-adicionar-carrinho" type="button">Adicionar ao carrinho</button>
+          <p id="cart-action-status" class="cart-action-status" role="status" aria-live="polite"></p>
+          <details class="book-more-info">
+            <summary><span class="book-info-icon" aria-hidden="true">i</span> Mais informações sobre o livro</summary>
+            <p>Com mais de 14 milhões de inscritos, o Manual do Mundo é considerado pelo Guinness World Records o maior canal de Ciência e Tecnologia em língua portuguesa do planeta! Nada mais natural, então, que este Grande Livro de Ciências — um dos maiores sucessos da coleção americana Big Fat Notebook, que vendeu 4 milhões de exemplares — chegasse ao Brasil com a chancela do Manual do Mundo. Supercolorido, rabiscado de marca-texto e com ilustrações engraçadas, este livro é garantia de informação — e diversão — de qualidade. A matéria vai grudar na sua mente feito cola com: macetes de memória, definições simples, tabelas práticas e testes de conhecimento. Tudo para você tirar as MELHORES NOTAS! Neste volume, revisto e atualizado pelo Manual do Mundo, você vai encontrar: universo e sistema solar, reações químicas, investigação científica, Leis de Newton, eletricidade e magnetismo, estrutura da Terra, sistemas corpóreos, teoria celular, clima, evolução e fósseis, ecossistemas e muito mais.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

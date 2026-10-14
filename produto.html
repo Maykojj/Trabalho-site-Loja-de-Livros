@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Detalhes do Produto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros e autores" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product-detail-shell">
+      <div class="product-detail-card">
+        <div class="coluna-capa">
+          <img id="product-cover" class="capa-livro-detalhe" alt="Capa do livro">
+        </div>
+
+        <div class="divisor-vertical"></div>
+
+        <div class="coluna-info">
+          <h1 id="product-title" class="titulo-produto">O Rei Arthur e os Cavaleiros da Távola Redonda</h1>
+
+          <div class="bloco-precos-detalhe">
+            <div id="product-old-price" class="preco-de-detalhe">De: <span class="old-price-amount">R$ 80,00</span></div>
+            <div id="product-price" class="preco-por-detalhe">Por: R$ 40,00</div>
+          </div>
+
+          <p id="product-description" class="product-detail-description">Uma aventura clássica para acompanhar a lenda do Rei Arthur e os cavaleiros da Távola Redonda.</p>
+          <div class="tag-frete-gratis">Escolha a modalidade de entrega na próxima etapa.</div>
+          <a id="product-buy-link" href="compra.html?livro=arthur" class="btn-compre-agora">Comprar agora</a>
+          <button id="add-to-cart" class="btn-adicionar-carrinho" type="button">Adicionar ao carrinho</button>
+          <p id="cart-action-status" class="cart-action-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

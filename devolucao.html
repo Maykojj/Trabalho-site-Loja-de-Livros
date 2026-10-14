@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Devoluções</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categories-navbar" aria-label="Navegação principal">
+    <ul class="categories-menu">
+      <li>
+        <details class="genres-dropdown">
+          <summary>Mais gêneros</summary>
+          <ul class="genres-menu" aria-label="Gêneros literários">
+            <li><a href="genero-classicos.html">Livros Clássicos</a></li>
+            <li><a href="genero-comedia.html">Livros de Comédia</a></li>
+            <li><a href="genero-sociologia.html">Livros de Sociologia</a></li>
+            <li><a href="genero-aventuras.html">Livros de Aventuras</a></li>
+            <li><a href="genero-quadrinhos.html">Gibis/Quadrinhos</a></li>
+            <li><a href="genero-filosofia.html">Livros de Filosofia</a></li>
+            <li><a href="genero-contos.html">Livros de Contos</a></li>
+            <li><a href="genero-poesias.html">Poemas/Poesias</a></li>
+            <li><a href="genero-suspense.html">Livros de Suspense</a></li>
+            <li><a href="genero-culinaria.html">Livros de Culinária</a></li>
+            <li><a href="genero-fabulas.html">Livros de Fábulas</a></li>
+            <li><a href="genero-biografia.html">Livros de Biografia</a></li>
+            <li><a href="genero-ficcao.html">Livros de Ficção</a></li>
+            <li><a href="genero-historia.html">Livros de História</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="mais-desejados.html">Mais desejados</a></li>
+      <li><a href="melhores-promocoes.html">Melhores promoções</a></li>
+      <li><a href="novos-livros.html">Novos livros</a></li>
+      <li><a href="contato.html">Fale conosco</a></li>
+    </ul>
+  </nav>
+
+  <main class="container return-shell">
+    <section class="return-panel">
+      <span class="badge">Atendimento</span>
+      <h1>Solicitar devolução</h1>
+      <p>Informe os dados da compra e o motivo para registrar sua solicitação.</p>
+
+      <aside class="return-refund-estimate" aria-label="Estimativa do prazo de reembolso">
+        <h2>Quando recebo meu dinheiro de volta?</h2>
+        <p><strong>Pix:</strong> estimativa de até 10 dias úteis após a aprovação.</p>
+        <p><strong>Cartão:</strong> o estorno pode aparecer em até 2 faturas após a aprovação.</p>
+        <small>O prazo pode variar conforme a análise da devolução e a instituição financeira.</small>
+      </aside>
+
+      <form class="return-form" id="return-request-form">
+        <div class="form-group">
+          <label for="return-order">Número do pedido</label>
+          <input id="return-order" name="pedido" type="text" placeholder="Ex.: ML-12345" required>
+        </div>
+        <div class="form-group">
+          <label for="return-email">E-mail usado na compra</label>
+          <input id="return-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="return-reason">Motivo da devolução</label>
+          <select id="return-reason" name="motivo" required>
+            <option value="" selected disabled>Selecione um motivo</option>
+            <option>Arrependimento da compra</option>
+            <option>Produto danificado</option>
+            <option>Recebi um produto diferente</option>
+            <option>Outro motivo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="return-details">Detalhes</label>
+          <textarea id="return-details" name="detalhes" rows="4" placeholder="Conte mais sobre o que aconteceu" required></textarea>
+        </div>
+        <button class="btn-submit" type="submit">Enviar solicitação</button>
+        <p class="return-form-status" id="return-form-status" role="status" aria-live="polite"></p>
+      </form>
+      <a href="contato.html">Voltar para Fale conosco</a>
+    </section>
+  </main>
+  <script src="devolucao.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

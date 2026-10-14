@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Faturamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header admin-report-header">
+    <div class="header-container">
+      <a href="admin.html" class="admin-report-brand">📚 Painel Administrativo</a>
+      <a href="admin.html" class="admin-report-back">Voltar ao painel</a>
+    </div>
+  </header>
+
+  <main class="container admin-report-shell">
+    <section class="admin-report-intro">
+      <span class="badge">Relatório</span>
+      <h1>Faturamento e desempenho</h1>
+      <p>Confira as visualizações, adições ao carrinho, compras e solicitações de reembolso dos livros publicados.</p>
+    </section>
+
+    <p id="revenue-report-status" class="auth-footer" role="status" aria-live="polite"></p>
+
+    <section class="admin-report-summary" aria-label="Totais dos livros publicados">
+      <article class="admin-report-stat">
+        <span>Livros publicados</span>
+        <strong id="report-total-books">0</strong>
+      </article>
+      <article class="admin-report-stat">
+        <span>Visualizações</span>
+        <strong id="report-total-views">0</strong>
+      </article>
+      <article class="admin-report-stat">
+        <span>Adições ao carrinho</span>
+        <strong id="report-total-cart-adds">0</strong>
+      </article>
+      <article class="admin-report-stat">
+        <span>Compras</span>
+        <strong id="report-total-purchases">0</strong>
+      </article>
+      <article class="admin-report-stat">
+        <span>Pedidos de reembolso</span>
+        <strong id="report-total-refunds">0</strong>
+      </article>
+    </section>
+
+    <section class="admin-report-books">
+      <h2>Seus livros publicados</h2>
+      <div id="revenue-books-list" class="admin-report-book-list"></div>
+    </section>
+  </main>
+  <script src="metricas.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

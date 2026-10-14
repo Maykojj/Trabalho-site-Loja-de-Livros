@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Universo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-book-id="universo">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros e autores" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="product-detail-shell">
+      <div class="product-detail-card">
+        <div class="coluna-capa">
+          <img id="product-cover" class="capa-livro-detalhe" src="img/OsMistériosdoUniverso.png" alt="Capa de Os Mistérios do Universo">
+        </div>
+        <div class="divisor-vertical"></div>
+        <div class="coluna-info">
+          <h1 id="product-title" class="titulo-produto">Os Mistérios do Universo</h1>
+          <div class="bloco-precos-detalhe">
+            <div id="product-old-price" class="preco-de-detalhe">De: <span class="old-price-amount">R$ 120,00</span></div>
+            <div id="product-price" class="preco-por-detalhe">Por: R$ 90,00</div>
+          </div>
+          <p id="product-description" class="product-detail-description">Uma jornada fascinante por estrelas, planetas e mistérios do universo.</p>
+          <div class="tag-frete-gratis">Escolha a modalidade de entrega na próxima etapa.</div>
+          <a id="product-buy-link" href="compra.html?livro=universo" class="btn-compre-agora">Comprar agora</a>
+          <button id="add-to-cart" class="btn-adicionar-carrinho" type="button">Adicionar ao carrinho</button>
+          <p id="cart-action-status" class="cart-action-status" role="status" aria-live="polite"></p>
+          <details class="book-more-info">
+            <summary><span class="book-info-icon" aria-hidden="true">i</span> Mais informações sobre o livro</summary>
+            <p>Criadores do Manual do Mundo, Iberê Thenório e Mari Fulfaro convidam você a explorar outros mundos espalhados pelo Universo. Uma aventura repleta de fotografias impressionantes, ilustrações incríveis e histórias que revelam segredos de mais de 100 objetos celestes, fatos surpreendentes e as descobertas científicas mais empolgantes sobre o Universo. Você vai embarcar nessa viagem guiada pelo astrônomo Will Gater, desbravando o Sistema Solar e o espaço além. Vai aprender sobre eclipses, chuva no sol, nascimento dos planetas, explosões de estrelas, colisão de galáxias, entre muitos outros temas fascinantes.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Painel Gerencial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header" style="background: linear-gradient(135deg, #2f2d2a 0%, #4b433d 100%);">
+    <div class="header-container">
+      <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: 0.04em;">📚 Painel Administrativo</span>
+      <a href="index.html" style="color: #fff; font-weight: 700;">Sair do Painel</a>
+    </div>
+  </header>
+
+  <main class="container admin-shell">
+    <section class="admin-grid">
+      <div class="admin-panel admin-data-notice" style="grid-column: 1 / -1;">
+        <h2>Seu Faturamento</h2>
+        <p>Acompanhe o desempenho dos livros publicados no relatório.</p>
+        <a class="collection-book-link admin-report-link" href="faturamento.html">Ver faturamento</a>
+      </div>
+
+      <div class="admin-panel" style="grid-column: 1 / -1;">
+        <h2 style="margin-bottom: 1rem; text-align: left;">Cadastrar Novo Livro</h2>
+        <form id="new-book-form" class="inline-form">
+          <div class="form-group">
+            <label for="titulo-livro">Título da obra</label>
+            <input type="text" id="titulo-livro" name="titulo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="descricao-livro">Descrição do livro</label>
+            <textarea id="descricao-livro" name="descricao" rows="5" placeholder="Escreva uma apresentação sobre a história, o tema e o que torna este livro especial." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="capa-livro">Foto da capa (opcional)</label>
+            <input type="file" id="capa-livro" name="capa" accept="image/png,image/jpeg,image/webp">
+            <img id="capa-preview" class="book-image-box admin-cover-preview" alt="Prévia da capa selecionada" hidden>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preco-original">Preço anterior (R$), opcional</label>
+              <input type="number" id="preco-original" name="preco-original" min="0" step="0.01" placeholder="0,00">
+            </div>
+            <div class="form-group">
+              <label for="preco-venda">Preço de venda (R$)</label>
+              <input type="number" id="preco-venda" name="preco-venda" min="0.01" step="0.01" placeholder="0,00" required>
+            </div>
+          </div>
+
+          <div class="admin-actions">
+            <button type="submit" class="btn-submit">Publicar Livro</button>
+          </div>
+          <p id="book-form-status" class="auth-footer" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="catalogo.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

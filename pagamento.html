@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Pagamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    </div>
+  </header>
+
+  <main class="container payment-shell">
+    <div class="payment-layout">
+      <section class="form-card">
+        <div class="auth-header">
+          <span class="badge">Pagamento</span>
+        </div>
+
+        <div class="payment-selector">
+          <h1>Meios de Pagamento:</h1>
+          <div class="payment-options">
+            <a class="payment-choice payment-credit-choice" href="pagamento-credito.html">Cartão de Crédito</a>
+            <a class="payment-choice payment-debit-choice" href="pagamento-debito.html">Cartão de Débito</a>
+            <p class="payment-or">Ou</p>
+            <a class="payment-choice payment-pix-choice" href="pagamento-pix.html">Pix</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="summary-card">
+        <h3>Resumo do pedido</h3>
+        <ul class="summary-list">
+          <li><span>Livro</span><strong id="payment-book">O Rei Arthur e os Cavaleiros da Távola Redonda</strong></li>
+          <li><span>Subtotal</span><strong id="payment-subtotal">R$ 40,00</strong></li>
+          <li><span>Frete</span><strong id="payment-shipping">R$ 12,00</strong></li>
+          <li><span id="payment-discount-label">Desconto</span><strong id="payment-discount">R$ 0,00</strong></li>
+        </ul>
+        <div class="summary-total"><span>Total</span><strong id="payment-total">R$ 52,00</strong></div>
+      </aside>
+    </div>
+  </main>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

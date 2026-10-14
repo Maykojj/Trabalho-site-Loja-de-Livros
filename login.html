@@ -3,68 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mundo Livros - Login</title>
-  <!-- Link direcionado para o arquivo de estilos unificado -->
+  <title>Mundo Livros | Acessar Conta</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ================= TELA DE LOGIN ================= -->
-  <div id="login-layout" class="login-screen">
-    
-    <!-- Cabeçalho Ocre da tela de Login -->
-    <header class="login-header">
-      <div class="login-logo-area">
-        📖 Mundo Livros
-      </div>
-    </header>
-
-    <!-- Card de Login Centralizado -->
-    <div class="login-card">
-      <h2 class="card-title">Fazer Login</h2>
-      
-      <!-- Avatar de Usuário Tracejado -->
-      <div class="avatar-container">
-        <div class="avatar-circle">
-          <div class="avatar-head"></div>
-          <div class="avatar-body"></div>
-        </div>
-      </div>
-
-      <!-- Formulário de Login -->
-      <form class="login-form" onsubmit="return false;">
-        
-        <!-- Entrada: Email ou Celular -->
-        <div class="login-input-group">
-          <label class="input-label">Digite seu Email ou celular:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">👤</span>
-            <input type="text" placeholder="Email ou celular" required class="form-input">
-          </div>
-        </div>
-
-        <!-- Entrada: Senha -->
-        <div class="login-input-group">
-          <label class="input-label">Digite sua senha:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">🔒</span>
-            <input type="password" placeholder="Senha" required class="form-input">
-            <span class="toggle-visibility">👁️</span>
-          </div>
-          <a href="#" class="helper-link">Esqueceu sua senha?</a>
-        </div>
-
-        <!-- Botão Confirmar Verde -->
-        <button type="submit" class="btn-submit">Confirmar</button>
-        
-        <!-- Links de Ação Finais -->
-        <div class="form-footer">
-          <a href="#" class="helper-link">Não tem uma conta?</a>
-          <a href="index.html" class="btn-voltar-loja">← Voltar para a Loja</a>
-        </div>
-      </form>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
     </div>
-  </div>
+  </header>
 
+  <main class="container">
+    <div class="auth-box">
+      <div class="auth-header">
+        <span id="login-badge" class="badge">Minha conta</span>
+        <h2 id="login-title">Acessar Conta</h2>
+      </div>
+
+      <form id="login-form" action="index.html">
+        <div class="form-group">
+          <label id="email-label" for="email">E-mail ou Usuário</label>
+          <input type="email" id="email" name="email" autocomplete="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <div class="password-input-wrapper">
+            <input type="password" id="password" name="password" autocomplete="current-password" required>
+            <button class="password-visibility-toggle" type="button" aria-label="Mostrar senha" aria-pressed="false" aria-controls="password">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path class="eye-slash" d="m3 3 18 18"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="access-type-group" class="form-group">
+          <label for="access-type">Tipo de acesso</label>
+          <select id="access-type" name="access-type">
+            <option value="cliente">Cliente</option>
+            <option value="administrador">Administrador</option>
+          </select>
+        </div>
+        <button id="login-submit" type="submit" class="btn-submit">Entrar</button>
+      </form>
+
+      <p id="login-signup" class="auth-footer">
+        Não tem conta? <a href="cadastro.html">Cadastre-se</a>
+      </p>
+    </div>
+  </main>
+  <script src="login.js"></script>
+  <script src="navegacao-site.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Fale Conosco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categories-navbar" aria-label="Navegação principal">
+    <ul class="categories-menu">
+      <li>
+        <details class="genres-dropdown">
+          <summary>Mais gêneros</summary>
+          <ul class="genres-menu" aria-label="Gêneros literários">
+            <li><a href="genero-classicos.html">Livros Clássicos</a></li>
+            <li><a href="genero-comedia.html">Livros de Comédia</a></li>
+            <li><a href="genero-sociologia.html">Livros de Sociologia</a></li>
+            <li><a href="genero-aventuras.html">Livros de Aventuras</a></li>
+            <li><a href="genero-quadrinhos.html">Gibis/Quadrinhos</a></li>
+            <li><a href="genero-filosofia.html">Livros de Filosofia</a></li>
+            <li><a href="genero-contos.html">Livros de Contos</a></li>
+            <li><a href="genero-poesias.html">Poemas/Poesias</a></li>
+            <li><a href="genero-suspense.html">Livros de Suspense</a></li>
+            <li><a href="genero-culinaria.html">Livros de Culinária</a></li>
+            <li><a href="genero-fabulas.html">Livros de Fábulas</a></li>
+            <li><a href="genero-biografia.html">Livros de Biografia</a></li>
+            <li><a href="genero-ficcao.html">Livros de Ficção</a></li>
+            <li><a href="genero-historia.html">Livros de História</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="mais-desejados.html">Mais desejados</a></li>
+      <li><a href="melhores-promocoes.html">Melhores promoções</a></li>
+      <li><a href="novos-livros.html">Novos livros</a></li>
+      <li><a href="contato.html" aria-current="page">Fale conosco</a></li>
+    </ul>
+  </nav>
+
+  <main class="container contact-shell">
+    <section class="contact-chat" aria-label="Atendimento Mundo Livros">
+      <header class="contact-chat-header">
+        <span class="contact-chat-avatar" aria-hidden="true">📖</span>
+        <div class="contact-chat-title">
+          <strong>Mundo Livros</strong>
+          <span>Online</span>
+        </div>
+      </header>
+
+      <div class="contact-chat-messages" id="contact-messages" role="log" aria-live="polite" aria-relevant="additions">
+        <p class="contact-message">Como posso ajudar?</p>
+        <p class="contact-message">Para iniciar uma solicitação de devolução, acesse a opção abaixo.</p>
+      </div>
+
+      <div class="contact-quick-questions" aria-label="Perguntas frequentes">
+        <button type="button" data-question="Como acompanho meu pedido?">Acompanhar pedido</button>
+        <button type="button" data-question="Qual é o prazo de entrega?">Prazo de entrega</button>
+        <button type="button" data-question="Quais cupons estão disponíveis?">Cupons</button>
+        <button type="button" data-question="Quais formas de pagamento posso usar?">Pagamentos</button>
+        <button type="button" data-question="Quero fazer uma devolução">Devoluções</button>
+      </div>
+
+      <form class="contact-chat-compose" id="contact-form">
+        <label class="visually-hidden" for="contact-message-input">Escreva sua mensagem</label>
+        <textarea id="contact-message-input" name="mensagem" placeholder="Escreva algo" rows="2" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <script src="contato.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

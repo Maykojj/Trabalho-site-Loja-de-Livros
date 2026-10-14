@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Melhores promoções</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros, autores e temas" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+  <nav class="categories-navbar" aria-label="Navegação principal">
+    <ul class="categories-menu">
+      <li>
+        <details class="genres-dropdown">
+          <summary>Mais gêneros</summary>
+          <ul class="genres-menu" aria-label="Gêneros literários">
+            <li><a href="genero-classicos.html">Livros Clássicos</a></li>
+            <li><a href="genero-comedia.html">Livros de Comédia</a></li>
+            <li><a href="genero-sociologia.html">Livros de Sociologia</a></li>
+            <li><a href="genero-aventuras.html">Livros de Aventuras</a></li>
+            <li><a href="genero-quadrinhos.html">Gibis/Quadrinhos</a></li>
+            <li><a href="genero-filosofia.html">Livros de Filosofia</a></li>
+            <li><a href="genero-contos.html">Livros de Contos</a></li>
+            <li><a href="genero-poesias.html">Poemas/Poesias</a></li>
+            <li><a href="genero-suspense.html">Livros de Suspense</a></li>
+            <li><a href="genero-culinaria.html">Livros de Culinária</a></li>
+            <li><a href="genero-fabulas.html">Livros de Fábulas</a></li>
+            <li><a href="genero-biografia.html">Livros de Biografia</a></li>
+            <li><a href="genero-ficcao.html">Livros de Ficção</a></li>
+            <li><a href="genero-historia.html">Livros de História</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="mais-desejados.html">Mais desejados</a></li>
+      <li><a href="melhores-promocoes.html" aria-current="page">Melhores promoções</a></li>
+      <li><a href="novos-livros.html">Novos livros</a></li>
+      <li><a href="contato.html">Fale conosco</a></li>
+    </ul>
+  </nav>
+  <main class="collection-page">
+    <p class="about-eyebrow">Ofertas especiais</p>
+    <h1 class="collection-title">Melhores promoções</h1>
+    <p class="collection-description">Aproveite os preços promocionais dos livros em destaque.</p>
+    <div class="products-grid">
+      <article class="product-card">
+        <img class="book-image-box" src="img/OGrandeLivrodeMatemáticadoManualdoMundo.png" alt="Capa de O Grande Livro de Matemática">
+        <div class="product-meta">
+          <h2 class="product-name-row">O Grande Livro de Matemática do Manual do Mundo</h2>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 100,00</span><br>Por: <span>R$ 50,00</span></div>
+          <a href="produto-matematica.html" class="collection-book-link">Ver promoção</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="book-image-box" src="img/OGrandeLivrodeHistóriadoManualdoMundo.png" alt="Capa de O Grande Livro de História">
+        <div class="product-meta">
+          <h2 class="product-name-row">O Grande Livro de História do Manual do Mundo</h2>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 120,00</span><br>Por: <span>R$ 60,00</span></div>
+          <a href="produto-historia.html" class="collection-book-link">Ver promoção</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="book-image-box" src="img/OGrandeLivrodeCiênciasdoManualdoMundo.png" alt="Capa de O Grande Livro de Ciências">
+        <div class="product-meta">
+          <h2 class="product-name-row">O Grande Livro de Ciências do Manual do Mundo</h2>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 110,00</span><br>Por: <span>R$ 55,00</span></div>
+          <a href="produto-ciencias.html" class="collection-book-link">Ver promoção</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="book-image-box" src="img/OsMistériosdoUniverso.png" alt="Capa de Os Mistérios do Universo">
+        <div class="product-meta">
+          <h2 class="product-name-row">Os Mistérios do Universo</h2>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 120,00</span><br>Por: <span>R$ 90,00</span></div>
+          <a href="produto-universo.html" class="collection-book-link">Ver promoção</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

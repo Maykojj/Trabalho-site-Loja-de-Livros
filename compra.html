@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Dados de Entrega</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    </div>
+  </header>
+
+  <main class="container checkout-shell">
+    <div class="checkout-layout">
+      <section class="form-card">
+        <div class="auth-header">
+          <span class="badge">Entrega</span>
+          <h2>Informações de Envio</h2>
+        </div>
+
+        <form id="checkout-form" action="pagamento.html">
+          <div class="form-group">
+            <label for="quantidade">Quantidade de livros</label>
+            <input type="number" id="quantidade" min="1" max="99" value="1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cep">CEP de Destino</label>
+            <input type="text" id="cep" placeholder="00000-000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="end">Endereço Completo</label>
+            <input type="text" id="end" placeholder="Rua, número, complemento" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" required>
+            </div>
+            <div class="form-group">
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="log">Modalidade de Frete</label>
+            <select id="log">
+              <option value="12">Econômica (Correios) - R$ 12,00 (7 dias úteis)</option>
+              <option value="25">Expressa (Jadlog) - R$ 25,00 (2 dias úteis)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="coupon-code">Cupom de desconto (opcional)</label>
+            <div class="coupon-entry">
+              <input type="text" id="coupon-code" placeholder="Digite seu cupom" autocomplete="off">
+              <button type="button" id="apply-coupon" class="coupon-apply">Aplicar</button>
+            </div>
+            <p id="coupon-message" class="coupon-message" role="status" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn-submit">Seguir para o Pagamento</button>
+        </form>
+      </section>
+
+      <aside class="summary-card">
+        <h3>Resumo do pedido</h3>
+        <ul class="summary-list">
+          <li><span>Livro</span><strong id="checkout-book">O Rei Arthur e os Cavaleiros da Távola Redonda</strong></li>
+          <li><span>Subtotal</span><strong id="checkout-subtotal">R$ 40,00</strong></li>
+          <li><span>Frete</span><strong id="checkout-shipping">R$ 12,00</strong></li>
+          <li><span id="checkout-discount-label">Desconto</span><strong id="checkout-discount">R$ 0,00</strong></li>
+        </ul>
+        <div class="summary-total"><span>Total</span><strong id="checkout-total">R$ 52,00</strong></div>
+      </aside>
+    </div>
+  </main>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

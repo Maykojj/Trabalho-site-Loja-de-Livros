@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Matemática</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-book-id="matematica">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros e autores" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="product-detail-shell">
+      <div class="product-detail-card math-product-card">
+        <div class="coluna-capa">
+          <img id="product-cover" class="capa-livro-detalhe" src="img/OGrandeLivrodeMatemáticadoManualdoMundo.png" alt="Capa de O Grande Livro de Matemática">
+        </div>
+        <div class="divisor-vertical"></div>
+        <div class="coluna-info">
+          <h1 id="product-title" class="titulo-produto">O Grande Livro de Matemática do Manual do Mundo</h1>
+          <div class="bloco-precos-detalhe">
+            <div id="product-old-price" class="preco-de-detalhe">De: <span class="old-price-amount">R$ 100,00</span></div>
+            <div id="product-price" class="preco-por-detalhe">Por: R$ 50,00</div>
+          </div>
+          <p id="product-description" class="product-detail-description">Explore conceitos e curiosidades da matemática de forma acessível e divertida.</p>
+          <div class="tag-frete-gratis">Escolha a modalidade de entrega na próxima etapa.</div>
+          <a id="product-buy-link" href="compra.html?livro=matematica" class="btn-compre-agora">Comprar agora</a>
+          <button id="add-to-cart" class="btn-adicionar-carrinho" type="button">Adicionar ao carrinho</button>
+          <p id="cart-action-status" class="cart-action-status" role="status" aria-live="polite"></p>
+          <details class="book-more-info">
+            <summary><span class="book-info-icon" aria-hidden="true">i</span> Mais informações sobre o livro</summary>
+            <p>Com mais de 16 milhões de inscritos, o Manual do Mundo é considerado pelo Guinness World Records o maior canal de Ciência e Tecnologia em língua portuguesa do planeta! Nada mais natural que este Grande Livro de Matemática — um dos maiores sucessos da coleção americana Big Fat Notebook, que já vendeu mais de 8 milhões de exemplares — chegasse ao Brasil com a chancela do Manual do Mundo. Supercolorido, rabiscado de marca-texto e com ilustrações divertidas, este livro é garantia de informação de qualidade para todos que querem entender a arte da matemática. A matéria vai grudar na sua mente feito cola com definições claras e testes de conhecimento. Tudo para você tirar as melhores notas! Neste volume, revisto e atualizado pelo Manual do Mundo, você vai encontrar: tipos de números, máximo divisor comum, frações, números decimais, razões, porcentagens, equações, geometria, probabilidade, plano cartesiano e muito mais.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="pesquisa.js"></script>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

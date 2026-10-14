@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Mundo Livros | Meu Carrinho</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    <h2 class="page-title">Meu Carrinho</h2>
+  </div>
+</header>
+
+<main class="container cart-shell">
+  <section class="empty-cart" id="empty-cart" aria-labelledby="empty-cart-title">
+    <div class="empty-cart-icon" aria-hidden="true">🛒</div>
+    <div class="empty-cart-content">
+      <h1 id="empty-cart-title">Seu carrinho está vazio</h1>
+      <p>Explore os livros e adicione seus favoritos ao carrinho.</p>
+      <a href="index.html#livros" class="empty-cart-login">Ver livros</a>
+      <a id="empty-cart-login" href="login.html" class="empty-cart-login secondary-cart-login">Faça login para comprar</a>
+    </div>
+  </section>
+  <section id="cart-content" class="cart-content" aria-labelledby="cart-title" hidden>
+    <h1 id="cart-title">Seus livros</h1>
+    <div id="cart-items" class="cart-items"></div>
+    <p id="cart-total" class="cart-total"></p>
+    <div id="cart-login-cta" class="cart-login-cta" hidden>
+      <p>Faça login para poder comprar.</p>
+      <a href="login.html" class="btn-submit cart-login-button">Fazer login</a>
+    </div>
+    <a href="index.html#livros" class="empty-cart-login">Continuar comprando</a>
+  </section>
+  <p id="cart-status" class="cart-action-status" role="status" aria-live="polite"></p>
+</main>
+<script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

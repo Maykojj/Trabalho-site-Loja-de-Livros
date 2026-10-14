@@ -3,287 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mundo Livros</title>
-  <!-- Link único para o arquivo CSS de todo o site -->
+  <title>Mundo Livros | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
 
-  <!-- ================= VISTA DA LOJA PRINCIPAL ================= -->
-  <div id="loja" class="page-section">
-    <!-- Topo da Página -->
-    <header class="top-header">
-      <div class="container">
-        <div class="logo-area">
-          <span class="icon">📖</span> Mundo Livros
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Pesquisar...">
-        </div>
-        <div class="header-icons">
-          <!-- Link que redireciona para a Tela de Login -->
-          <a href="#login" class="profile-link">👤 Perfil</a>
-          <span>🛒 Carrinho</span>
+      <div class="search-wrapper">
+        <div class="search-loupe"></div>
+        <input type="text" placeholder="Pesquisar livros, autores e temas" aria-label="Pesquisar livros" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" autocomplete="off">
+        <div class="search-suggestions" id="search-suggestions" role="listbox" hidden></div>
+      </div>
+
+      <div class="utilities-nav">
+        <a href="cupons.html" class="utility-link" title="Cupons" aria-label="Cupons">🎟️</a>
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categories-navbar">
+    <ul class="categories-menu">
+      <li>
+        <details class="genres-dropdown">
+          <summary>Mais gêneros</summary>
+          <ul class="genres-menu" aria-label="Gêneros literários">
+            <li><a href="genero-classicos.html">Livros Clássicos</a></li>
+            <li><a href="genero-comedia.html">Livros de Comédia</a></li>
+            <li><a href="genero-sociologia.html">Livros de Sociologia</a></li>
+            <li><a href="genero-aventuras.html">Livros de Aventuras</a></li>
+            <li><a href="genero-quadrinhos.html">Gibis/Quadrinhos</a></li>
+            <li><a href="genero-filosofia.html">Livros de Filosofia</a></li>
+            <li><a href="genero-contos.html">Livros de Contos</a></li>
+            <li><a href="genero-poesias.html">Poemas/Poesias</a></li>
+            <li><a href="genero-suspense.html">Livros de Suspense</a></li>
+            <li><a href="genero-culinaria.html">Livros de Culinária</a></li>
+            <li><a href="genero-fabulas.html">Livros de Fábulas</a></li>
+            <li><a href="genero-biografia.html">Livros de Biografia</a></li>
+            <li><a href="genero-ficcao.html">Livros de Ficção</a></li>
+            <li><a href="genero-historia.html">Livros de História</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="mais-desejados.html">Mais desejados</a></li>
+      <li><a href="melhores-promocoes.html">Melhores promoções</a></li>
+      <li><a href="novos-livros.html">Novos livros</a></li>
+      <li><a href="contato.html">Fale conosco</a></li>
+    </ul>
+  </nav>
+
+  <div class="banner-wrapper">
+    <section class="promo-carousel" aria-label="Banner de promoções">
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Slide anterior">&#8592;</button>
+      <div class="promo-viewport">
+        <div class="promo-track">
+          <article class="promo-slide">
+            <div class="promo-content">
+              <img class="featured-book-cover cover-matematica" src="img/OGrandeLivrodeMatemáticadoManualdoMundo.png" alt="Capa de O Grande Livro de Matemática">
+              <div class="promo-details">
+                <h2>O Grande Livro de Matemática do Manual do Mundo</h2>
+                <div class="promo-buy-row">
+                  <div>
+                    <div class="price-old">De: <span class="old-price-amount">R$ 100,00</span></div>
+                    <div class="price-current">Por: R$ 50,00</div>
+                  </div>
+                  <a href="produto-matematica.html" class="promo-buy-button">Comprar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="promo-slide">
+            <div class="promo-content">
+              <img class="featured-book-cover cover-historia" src="img/OGrandeLivrodeHistóriadoManualdoMundo.png" alt="Capa de O Grande Livro de História">
+              <div class="promo-details">
+                <h2>O Grande Livro de História do Manual do Mundo</h2>
+                <div class="promo-buy-row">
+                  <div>
+                    <div class="price-old">De: <span class="old-price-amount">R$ 120,00</span></div>
+                    <div class="price-current">Por: R$ 60,00</div>
+                  </div>
+                  <a href="produto-historia.html" class="promo-buy-button">Comprar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="promo-slide">
+            <div class="promo-content">
+              <img class="featured-book-cover cover-ciencias" src="img/OGrandeLivrodeCiênciasdoManualdoMundo.png" alt="Capa de O Grande Livro de Ciências">
+              <div class="promo-details">
+                <h2>O Grande Livro de Ciências do Manual do Mundo</h2>
+                <div class="promo-buy-row">
+                  <div>
+                    <div class="price-old">De: <span class="old-price-amount">R$ 110,00</span></div>
+                    <div class="price-current">Por: R$ 55,00</div>
+                  </div>
+                  <a href="produto-ciencias.html" class="promo-buy-button">Comprar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="promo-slide">
+            <div class="promo-content">
+              <img class="featured-book-cover cover-universo" src="img/OsMistériosdoUniverso.png" alt="Capa de Os Mistérios do Universo">
+              <div class="promo-details">
+                <h2>Os Mistérios do Universo</h2>
+                <div class="promo-buy-row">
+                  <div>
+                    <div class="price-old">De: <span class="old-price-amount">R$ 120,00</span></div>
+                    <div class="price-current">Por: R$ 90,00</div>
+                  </div>
+                  <a href="produto-universo.html" class="promo-buy-button">Comprar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-    </header>
+      <div class="carousel-dots" role="group" aria-label="Indicadores dos slides">
+        <button class="carousel-dot" type="button" aria-label="Ir para slide 1"></button>
+        <button class="carousel-dot" type="button" aria-label="Ir para slide 2"></button>
+        <button class="carousel-dot" type="button" aria-label="Ir para slide 3"></button>
+        <button class="carousel-dot" type="button" aria-label="Ir para slide 4"></button>
+      </div>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Próximo slide">&#8594;</button>
+    </section>
+  </div>
 
-    <!-- Menu de Navegação -->
-    <nav class="nav-bar">
-      <div class="container">
+  <main class="showcase-container" id="livros">
+    <h2 class="section-title">Mais Vendidos</h2>
+    <div class="products-grid">
+      <article class="product-card">
+        <img class="book-image-box" src="img/OReiArthureosCavaleirosdaTavolaRedonda.png" alt="Capa do livro O Rei Arthur e os Cavaleiros da Távola Redonda">
+        <div class="buy-control-row">
+          <a href="produto.html" class="btn-buy-now">Comprar agora</a>
+          <div class="quantity-stepper" aria-label="Quantidade de Rei Arthur">
+            <button type="button" data-quantity-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input type="number" value="1" min="1" max="99" aria-label="Quantidade de Rei Arthur">
+            <button type="button" data-quantity-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name-row"><span>■</span> O Rei Arthur e os Cavaleiros da Távola Redonda</div>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 80,00</span><br>Por: <span>R$ 40,00</span></div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="book-image-box" src="img/AMetamorfose.png" alt="Capa de A Metamorfose, de Franz Kafka">
+        <div class="buy-control-row">
+          <a href="produto.html?livro=aMetamorfose" class="btn-buy-now">Comprar agora</a>
+          <div class="quantity-stepper" aria-label="Quantidade de A Metamorfose">
+            <button type="button" data-quantity-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input type="number" value="1" min="1" max="99" aria-label="Quantidade de A Metamorfose">
+            <button type="button" data-quantity-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name-row"><span>■</span> A Metamorfose</div>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 20,00</span><br>Por: <span>R$ 10,00</span></div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="book-image-box" src="img/NoMeiodaNoite.png" alt="Capa de No Meio da Noite, de Riley Sager">
+        <div class="buy-control-row">
+          <a href="produto.html?livro=noMeioDaNoite" class="btn-buy-now">Comprar agora</a>
+          <div class="quantity-stepper" aria-label="Quantidade de No Meio da Noite">
+            <button type="button" data-quantity-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input type="number" value="1" min="1" max="99" aria-label="Quantidade de No Meio da Noite">
+            <button type="button" data-quantity-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name-row"><span>■</span> No Meio da Noite</div>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 60,00</span><br>Por: <span>R$ 30,00</span></div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="book-image-box" src="img/UmContodeNatal.png" alt="Capa de Um Conto de Natal, de Charles Dickens">
+        <div class="buy-control-row">
+          <a href="produto.html?livro=umContoDeNatal" class="btn-buy-now">Comprar agora</a>
+          <div class="quantity-stepper" aria-label="Quantidade">
+            <button type="button" data-quantity-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input type="number" value="1" min="1" max="99" aria-label="Quantidade de Um Conto de Natal">
+            <button type="button" data-quantity-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name-row"><span>■</span> Um Conto de Natal</div>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 70,00</span><br>Por: <span>R$ 35,00</span></div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="book-image-box" src="img/TodasasTecnicasCulinarias.png" alt="Capa de Todas as Técnicas Culinárias, de Le Cordon Bleu">
+        <div class="buy-control-row">
+          <a href="produto.html?livro=todasTecnicasCulinarias" class="btn-buy-now">Comprar agora</a>
+          <div class="quantity-stepper" aria-label="Quantidade">
+            <button type="button" data-quantity-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input type="number" value="1" min="1" max="99" aria-label="Quantidade de Todas as Técnicas Culinárias">
+            <button type="button" data-quantity-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name-row"><span>■</span> Todas as Técnicas Culinárias</div>
+          <div class="price-row">Preço<br>De: <span class="old-price-amount">R$ 190,00</span><br>Por: <span>R$ 130,00</span></div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Conheça-nos</h3>
         <ul>
-          <li><a href="#">Mais gêneros</a></li>
-          <li><a href="#">Mais desejados</a></li>
-          <li><a href="#">Melhores promoções</a></li>
-          <li><a href="#">Novos Livros</a></li>
-          <li><a href="#">Fale conosco</a></li>
+          <li><a href="sobre.html">Sobre a Mundo Livros</a></li>
+          <li><a href="#">Meios de Comunicação</a></li>
         </ul>
       </div>
-    </nav>
-
-    <!-- Conteúdo Principal da Loja -->
-    <main class="container">
-      
-      <!-- Seção do Carrossel Dinâmico Puro CSS -->
-      <div class="banner-container">
-        <div class="carousel">
-          <input type="radio" name="carousel-control" id="slide-1" checked hidden>
-          <input type="radio" name="carousel-control" id="slide-2" hidden>
-          <input type="radio" name="carousel-control" id="slide-3" hidden>
-          <input type="radio" name="carousel-control" id="slide-4" hidden>
-          <input type="radio" name="carousel-control" id="slide-5" hidden>
-
-          <div class="carousel-slides">
-            <!-- Slide 1 -->
-            <div class="banner slide item-1">
-              <div class="banner-img-container">
-                <img src="https://media-amazon.com" alt="O Grande Livro de Matemática" class="banner-img">
-              </div>
-              <div class="banner-text">
-                <h3>O grande livro de Matemática do Manual do Mundo</h3>
-                <p class="price-de">De: R$ 100,00</p>
-                <p class="price-por">Por: R$ 50,00</p>
-              </div>
-              <label for="slide-5" class="carousel-btn prev-btn">←</label>
-              <label for="slide-2" class="carousel-btn next-btn">→</label>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="banner slide item-2">
-              <div class="banner-img-container">
-                <img src="https://media-amazon.com" alt="O Grande Livro de História" class="banner-img">
-              </div>
-              <div class="banner-text">
-                <h3>O grande livro de História do Manual do Mundo</h3>
-                <p class="price-de">De: R$ 100,00</p>
-                <p class="price-por">Por: R$ 50,00</p>
-              </div>
-              <label for="slide-1" class="carousel-btn prev-btn">←</label>
-              <label for="slide-3" class="carousel-btn next-btn">→</label>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="banner slide item-3">
-              <div class="banner-img-container">
-                <img src="https://media-amazon.com" alt="O Grande Livro de Ciências" class="banner-img">
-              </div>
-              <div class="banner-text">
-                <h3>O grande livro de Ciências do Manual do Mundo</h3>
-                <p class="price-de">De: R$ 100,00</p>
-                <p class="price-por">Por: R$ 50,00</p>
-              </div>
-              <label for="slide-2" class="carousel-btn prev-btn">←</label>
-              <label for="slide-4" class="carousel-btn next-btn">→</label>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="banner slide item-4">
-              <div class="banner-img-container">
-                <img src="https://media-amazon.com" alt="Os Mistérios do Universo" class="banner-img">
-              </div>
-              <div class="banner-text">
-                <h3>Os Mistérios do Universo</h3>
-                <p class="price-de">De: R$ 120,00</p>
-                <p class="price-por">Por: R$ 60,00</p>
-              </div>
-              <label for="slide-3" class="carousel-btn prev-btn">←</label>
-              <label for="slide-5" class="carousel-btn next-btn">→</label>
-            </div>
-
-            <!-- Slide 5 -->
-            <div class="banner slide item-5">
-              <div class="banner-img-container">
-                <img src="https://media-amazon.com" alt="Atlas do Manual do Mundo" class="banner-img">
-              </div>
-              <div class="banner-text">
-                <h3>Atlas do Manual do Mundo</h3>
-                <p class="price-de">De: R$ 120,00</p>
-                <p class="price-por">Por: R$ 60,00</p>
-              </div>
-              <label for="slide-4" class="carousel-btn prev-btn">←</label>
-              <label for="slide-1" class="carousel-btn next-btn">→</label>
-            </div>
-          </div>
-        </div>
+      <div class="footer-section">
+        <h3>Meios de Pagamento</h3>
+        <ul>
+          <li>Crédito • Débito • Pix</li>
+        </ul>
       </div>
-
-      <!-- Vitrine de Produtos -->
-      <section>
-        <h2 class="section-title">MAIS VENDIDOS</h2>
-        <div class="grid-produtos">
-          <div class="card-produto">
-            <div class="capa-container"><div class="livro-real">Rei Arthur</div></div>
-            <div class="action-bar">
-              <button class="btn-comprar">Comprar agora</button>
-              <div class="contador"><button>-</button><span>01</span><button>+</button></div>
-            </div>
-            <div class="produto-info">
-              <div class="nome-livro">🛒 Rei Arthur e os Cavaleiros da Távola Redonda</div>
-              <div class="preco-de">De: R$ 50,00</div>
-              <div class="preco-por">Por: R$ 45,00</div>
-            </div>
-          </div>
-          <div class="card-produto"><div class="capa-container"></div><div class="action-bar"><button class="btn-comprar">Comprar agora</button><div class="contador"><button>-</button><span>01</span><button>+</button></div></div><div class="produto-info"><div class="nome-livro">🛒 Nome do livro</div><div class="preco-de">Preço: De:</div><div class="preco-por">Por:</div></div></div>
-          <div class="card-produto"><div class="capa-container"></div><div class="action-bar"><button class="btn-comprar">Comprar agora</button><div class="contador"><button>-</button><span>01</span><button>+</button></div></div><div class="produto-info"><div class="nome-livro">🛒 Nome do livro</div><div class="preco-de">Preço: De:</div><div class="preco-por">Por:</div></div></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Rodapé da Loja -->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-links">
-          <div class="footer-col"><h4>Conheça-nos</h4><ul><li>Sobre a Mundo Livros</li><li>Meios de Comunicação</li></ul></div>
-          <div class="footer-col"><h4>Meios de Pagamentos</h4><ul><li>Crédito</li><li>Débito</li><li>Pix</li></ul></div>
-          <div class="footer-col"><h4>Tire suas dúvidas</h4><ul><li>Ajuda</li></ul></div>
-        </div>
-        <div class="footer-bottom"><p>Formas de pagamento aceitas: Pix e cartões de crédito ou débito (Visa, Mastercard e Elo).</p></div>
+      <div class="footer-section">
+        <h3>Tire suas dúvidas</h3>
+        <ul>
+          <li><a href="contato.html">Ajuda</a></li>
+        </ul>
       </div>
-    </footer>
-  </div>
-
-
-  <!-- ================= VISTA DA TELA DE LOGIN ================= -->
-  <div id="login" class="page-section login-screen">
-    <!-- Cabeçalho Ocre da tela de Login -->
-    <header class="login-header">
-      <div class="login-logo-area">
-        📖 Mundo Livros
+      <div class="footer-section">
+        <h3>Área Administrativa</h3>
+        <ul>
+          <li><a href="login.html?tipo=administrador">Entrar na sua conta administrativa</a></li>
+        </ul>
       </div>
-    </header>
-
-    <!-- Card de Login -->
-    <div class="login-card">
-      <h2 class="card-title">Fazer Login</h2>
-      
-      <!-- Avatar de Usuário Tracejado -->
-      <div class="avatar-container">
-        <div class="avatar-circle">
-          <div class="avatar-head"></div>
-          <div class="avatar-body"></div>
-        </div>
-      </div>
-
-      <form class="login-form" onsubmit="return false;">
-        <!-- Entrada: Email ou Celular -->
-        <div class="login-input-group">
-          <label class="input-label">Digite seu Email ou celular:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">👤</span>
-            <input type="text" placeholder="Email ou celular" required class="form-input">
-          </div>
-        </div>
-
-        <!-- Entrada: Senha -->
-        <div class="login-input-group">
-          <label class="input-label">Digite sua senha:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">🔒</span>
-            <input type="password" placeholder="Senha" required class="form-input">
-            <span class="toggle-visibility">👁️</span>
-          </div>
-          <!-- Link direcionado para a tela de recuperação de senha -->
-          <a href="#esqueceu-senha" class="helper-link">Esqueceu sua senha?</a>
-        </div>
-
-        <!-- Botão Confirmar -->
-        <button type="submit" class="btn-submit">Confirmar</button>
-        
-        <!-- Links de Ação Finais -->
-        <div class="form-footer">
-          <a href="#cadastro" class="helper-link">Não tem uma conta?</a>
-          <a href="#loja" class="btn-voltar-loja">← Voltar para a Loja</a>
-        </div>
-      </form>
     </div>
-  </div>
-
-
-  <!-- ================= VISTA DA TELA ESQUECEU A SENHA ================= -->
-  <div id="esqueceu-senha" class="page-section login-screen">
-    <!-- Cabeçalho Ocre da tela de Recuperação -->
-    <header class="login-header">
-      <div class="login-logo-area">
-📖 Mundo Livros
-      </div>
-    </header>
-
-    <div class="login-card">
-      <h2 class="card-title">Esqueceu a senha:</h2>
-      
-      <form class="login-form" onsubmit="return false;">
-        <div class="login-input-group">
-          <label class="input-label">Digite seu Email ou celular:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">👤</span>
-            <input type="text" placeholder="Email ou celular" required class="form-input">
-          </div>
-        </div>
-
-        <button type="submit" class="btn-submit">Confirmar</button>
-        
-        <div class="form-footer">
-          <a href="#cadastro" class="helper-link">Não tem uma conta?</a>
-          <a href="#login" class="btn-voltar-loja">← Voltar para o Login</a>
-        </div>
-      </form>
+    <div class="footer-bottom-text">
+      Formas de pagamento aceitas: Pix e cartões de crédito ou débito (Visa, Mastercard e Elo)
     </div>
-  </div>
-
-  <!-- ================= VISTA DA TELA DE CADASTRO ================= -->
-  <div id="cadastro" class="page-section login-screen">
-    <header class="login-header">
-      <div class="login-logo-area">📖 Mundo Livros</div>
-    </header>
-    
-    <div class="login-card">
-      <h2 class="card-title">Criar Conta</h2>
-      
-      <form class="login-form" onsubmit="return false;">
-        <div class="login-input-group">
-          <label class="input-label">Digite seu Nome:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">👤</span>
-            <input type="text" placeholder="Seu nome" required class="form-input">
-          </div>
-        </div>
-        
-        <div class="login-input-group">
-          <label class="input-label">Digite seu Email ou celular:</label>
-          <div class="field-wrapper">
-            <span class="field-icon">📧</span>
-            <input type="text" placeholder="Email ou celular" required class="form-input">
-          </div>
-        </div>
-        
-        <button type="submit" class="btn-submit">Confirmar</button>
-        
-        <div class="form-footer">
-          <a href="#login" class="btn-voltar-loja">Já tem uma conta? Faça Login</a>
-        </div>
-      </form>
-    </div>
-  </div>
-
+  </footer>
+  <script src="pesquisa.js"></script>
+  <script src="catalogo.js"></script>
+  <script src="carrossel.js"></script>
+  <script src="controles-quantidade.js"></script>
+  <script src="navegacao-site.js"></script>
 </body>
 </html>

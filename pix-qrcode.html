@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | QR Code Pix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    </div>
+  </header>
+  <main class="container payment-shell">
+    <section class="payment-screen-card pix-qr-card">
+      <div class="payment-pix-mark" aria-hidden="true">PIX</div>
+      <h1>Escaneie o QR Code</h1>
+      <p>Valor da compra: <strong id="pix-total">R$ 52,00</strong></p>
+      <svg class="pix-qr-image" viewBox="0 0 210 210" role="img" aria-label="QR Code ilustrativo; não processa pagamentos">
+        <rect width="210" height="210" fill="#fff"/>
+        <path fill="#171717" d="M10 10h70v70H10zM20 20v50h50V20zM30 30h30v30H30zM130 10h70v70h-70zM140 20v50h50V20zM150 30h30v30h-30zM10 130h70v70H10zM20 140v50h50v-50zM30 150h30v30H30zM90 10h10v10H90zM110 10h10v10h-10zM90 30h20v10H90zM110 50h10v20h-10zM90 70h10v20H90zM100 90h10v10h-10zM120 90h10v20h-10zM140 90h10v10h-10zM160 90h20v10h-20zM190 90h10v20h-10zM10 90h10v20H10zM30 90h20v10H30zM60 90h10v20H60zM80 100h10v10H80zM90 110h20v10H90zM130 110h10v20h-10zM150 110h10v10h-10zM170 110h20v10h-20zM90 130h10v20H90zM110 130h20v10h-20zM140 130h10v20h-10zM160 130h10v10h-10zM190 130h10v20h-10zM90 160h20v10H90zM120 150h10v20h-10zM140 160h20v10h-20zM170 150h10v20h-10zM190 170h10v20h-10zM90 190h10v10H90zM110 180h20v10h-20zM140 190h10v10h-10zM160 180h10v20h-10zM180 190h10v10h-10z"/>
+      </svg>
+      <div class="pix-copy-field">
+        <label for="pix-copy-code">Pix copia e cola</label>
+        <div class="pix-copy-row">
+          <input id="pix-copy-code" type="text" value="" placeholder="Gerando código Pix..." readonly>
+          <button id="copy-pix-code" class="payment-next" type="button">Copiar código</button>
+        </div>
+        <p id="pix-copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="payment-screen-actions">
+        <a class="payment-back" href="pagamento-pix.html">Voltar</a>
+        <a class="payment-next" href="pedido-confirmado.html?metodo=pix">Confirmar</a>
+      </div>
+    </section>
+  </main>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

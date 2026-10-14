@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Cartão de Débito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    </div>
+  </header>
+  <main class="container payment-shell">
+    <section class="payment-screen-card">
+      <p class="payment-kicker">Meio de Pagamento:</p>
+      <h1>Cartão de Débito</h1>
+      <p class="payment-instruction">Preencha os dados do titular e do cartão para revisar o pagamento.</p>
+      <p class="payment-total-summary">Total do pedido: <strong id="card-payment-total">R$ 0,00</strong></p>
+      <form class="payment-brand-form payment-card-form" data-payment-method="debito" autocomplete="off">
+        <input type="hidden" name="metodo" value="debito">
+        <div class="card-details-grid">
+          <label class="payment-field">
+            <span>Nome completo impresso no cartão</span>
+            <input type="text" name="nome-cartao" autocomplete="off" placeholder="Como aparece no cartão" required>
+          </label>
+          <label class="payment-field">
+            <span>CPF do titular</span>
+            <input type="text" name="cpf-titular" inputmode="numeric" maxlength="11" placeholder="Somente números" pattern="[0-9]{11}" title="Digite os 11 números do CPF." autocomplete="off" required>
+          </label>
+          <label class="payment-field">
+            <span>Número do cartão</span>
+            <input type="text" name="numero-cartao" inputmode="numeric" maxlength="19" placeholder="Somente números" pattern="[0-9]{13,19}" autocomplete="off" required>
+          </label>
+          <label class="payment-field">
+            <span>Validade</span>
+            <input type="text" name="validade" inputmode="numeric" maxlength="5" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])/[0-9]{2}" autocomplete="off" required>
+          </label>
+          <label class="payment-field">
+            <span>Código de segurança (CVV)</span>
+            <input type="password" name="cvv" inputmode="numeric" maxlength="4" placeholder="3 Dígitos" pattern="[0-9]{3,4}" autocomplete="off" required>
+          </label>
+        </div>
+        <div class="payment-screen-actions">
+          <a class="payment-back" href="pagamento.html">Voltar</a>
+          <button class="payment-next" type="submit">Fazer pagamento</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

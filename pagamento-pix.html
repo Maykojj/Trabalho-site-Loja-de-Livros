@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Pagamento via Pix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+    </div>
+  </header>
+  <main class="container payment-shell">
+    <section class="payment-screen-card payment-pix-screen">
+      <div class="payment-pix-mark" aria-hidden="true">PIX</div>
+      <p class="payment-kicker">Meio de Pagamento</p>
+      <h1>Confira o valor e gere seu Pix</h1>
+      <p id="pix-total" class="payment-pix-total">R$ 52,00</p>
+      <ol class="payment-pix-steps">
+        <li>Na próxima etapa, escaneie o QR Code com o aplicativo do seu banco.</li>
+        <li>Confira o valor antes de confirmar a transferência.</li>
+        <li>Se preferir, copie o código Pix.</li>
+      </ol>
+      <div class="payment-screen-actions">
+        <a class="payment-back" href="pagamento.html">Voltar</a>
+        <a class="payment-next" href="pix-qrcode.html">Continuar para o QR Code</a>
+      </div>
+    </section>
+  </main>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>

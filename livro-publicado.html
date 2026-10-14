@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Livros | Livro publicado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-published-product>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="main-logo"><span class="logo-icon">📖</span> Mundo Livros</a>
+      <div class="utilities-nav">
+        <a href="carrinho.html" class="cart-trigger" title="Carrinho" aria-label="Carrinho">🛒</a>
+        <a href="login.html" class="user-avatar" title="Minha Conta" aria-label="Minha conta"></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <p id="published-book-not-found" class="published-book-not-found" role="alert" hidden>
+      Este livro publicado não foi encontrado. Volte para <a href="novos-livros.html">Novos livros</a>.
+    </p>
+    <div id="published-product-detail" class="product-detail-shell" hidden>
+      <div class="product-detail-card published-product-card">
+        <div class="coluna-capa">
+          <img id="product-cover" class="capa-livro-detalhe" alt="">
+          <div id="product-cover-placeholder" class="published-cover-placeholder" hidden>Capa do livro</div>
+        </div>
+        <div class="divisor-vertical"></div>
+        <div class="coluna-info">
+          <h1 id="product-title" class="titulo-produto"></h1>
+          <div class="bloco-precos-detalhe">
+            <div id="product-old-price" class="preco-de-detalhe" hidden>De: <span class="old-price-amount"></span></div>
+            <div id="product-price" class="preco-por-detalhe"></div>
+          </div>
+          <p id="product-description" class="product-detail-description"></p>
+          <div class="tag-frete-gratis">Escolha a modalidade de entrega na próxima etapa.</div>
+          <a id="product-buy-link" href="compra.html" class="btn-compre-agora">Comprar agora</a>
+          <button id="add-to-cart" class="btn-adicionar-carrinho" type="button">Adicionar ao carrinho</button>
+          <p id="cart-action-status" class="cart-action-status" role="status" aria-live="polite"></p>
+          <details class="book-more-info">
+            <summary><span class="book-info-icon" aria-hidden="true">i</span> Mais informações sobre o livro</summary>
+            <p id="product-full-description"></p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="metricas.js"></script>
+  <script src="compra.js"></script>
+  <script src="navegacao-site.js"></script>
+</body>
+</html>
